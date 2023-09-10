@@ -4,89 +4,261 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
+
 <style>
-    #header {
-        display: flex;
-        align-items: center;
-        height: 100vh;
+    body {
+        font-family: sans-serif;
+        margin: 0;
     }
 
-    .minFs {
+    .mainPage {
         min-height: 100vh;
-        color: aquamarine;
+        background-color: #B8D8E6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 6rem;
+    }
+
+    .img-center {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .img-center img {
+        width: 15rem;
+        box-shadow: 0 0 10px #333;
+        border-radius: 100%;
+    }
+
+
+    .header-info-items {
+        text-align: center;
+        color: white;
+    }
+
+    footer {
+        background-color: #174584;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .portfolio {
+        background-color: #B8D8E6;
+    }
+
+
+    .page-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .about {
-        min-height: 70vh;
+        min-height: 60vh;
+        background-color: white;
+    }
+    .about div div div p {
+            font-size: 1.5rem;
+        }
+    .contact {
+        min-height: 50vh;
+        background-color: white;
     }
 
-    .bg-color-red {
-        background-color: red;
-        border: 1rem;
+    .navbar {
+        background-color: #174584;
+        color: white;
+        text-decoration: none;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
     }
-
-    .bg-color-blue {
-        background-color: blue;
-        border: 1rem;
+    .navbar-dropdown {
+        background-color: #174584;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
     }
-
-    .bg-color-green {
-        background-color: green;
-        border: 1rem;
-    }
-    .paddingNavList{
-        padding: 25px;
-    }
-    .hideUnderline{
+    .navbar ul li a {
         text-decoration: none;
         color: white;
     }
-    .navbar {
-        background-color: #2C3D50;
+
+    a {
+        text-decoration: none;
+    }
+
+    .navbar-brand {
+        color: white;
+        font-size: 1.75em;
+        display: flex;
+        justify-content: start;
+    }
+
+    .image-container {
+        position: relative;
+        text-align: center;
         color: white;
     }
-    ul{
-        padding-top: 1%;
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    .pageOne{
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+
+    .card-about div div div {
+        background-color: transparent;
+        border-color: transparent;
     }
-    /* a {
-        
-    } */
+
+    .card-about div div div a {
+        color: black;
+    }
+    .contact-img{
+            width: 2rem;
+        }
+    .contact-text{
+            font-size: 1rem;
+        }
+    .btn:hover{
+        color: white; /* Change this to your desired hover color */
+    }
+    .btn-check:focus+.btn, .btn:focus {
+        box-shadow: 0 0 0 0;
+    }
+
+    @media screen and (max-width:990px) {
+        .about{
+            min-height: 40vh;
+        }
+        .img-center img {
+            width: 25rem;
+        }
+        .about div div div p {
+            font-size: 1.8rem;
+        }
+        .contact{
+            min-height: 30vh;
+        }
+        .contact-img{
+            width: 3rem;
+        }
+        .contact-text{
+            font-size: 2rem;
+        }
+    }
 </style>
 
 <head>
 
 </head>
 
+<!-- Student - Computer Engineering -->
+
 <body>
-   <nav class="navbar text-uppercase fixed-top">
-        <div class="container d-flex">
-            <a class="navbar navbar-brand"> Portfolio </a>
-            <ul class="d-flex justify-content-end" style="list-style-type: none; ">
-                <li class="paddingNavList">
-                    <a href="#" class="hideUnderline">Portfolio</a>
-                </li>
-                <li class="paddingNavList">
-                    <a href="#" class="hideUnderline">About</a>
-                </li>
-                <li class="paddingNavList">
-                    <a href="#" class="hideUnderline">Contract</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#mainPage" style="color: white;">Welcome to my Portfoilio</a>
+            </div>
+            <div class="dropdown d-lg-none d-block ">
+                <button class="btn navbar-dropdown dropdown-toggle  style="font-size: 1.5rem;" type="button" data-bs-toggle="dropdown" aria-expanded="false" dropdown-link-hover-color="white">
+                    Menu 
+                  </button>
+                  <ul class="dropdown-menu navbar-dropdown">
+                    <li><a class="dropdown-item " href="#about">Action</a></li>
+                    <li><a class="dropdown-item" href="#portfolio">Another action</a></li>
+                    <li><a class="dropdown-item" href="#contact">Something else here</a></li>
+                  </ul>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end ">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3"><a href="#about">About</a></li>
+                    <li class="nav-item mx-3"><a href="#portfolio">Portfoilio</a></li>
+                    <li class="nav-item mx-3"><a href="#contact">contact</a></li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-   </nav>
-    <header class="pageOne">
-       <div class="container d-flex flex-column">
-            <div>img</div>
-       </div>
+
+
+    <header class="mainPage " id="mainPage">
+
+            <div class="container header-info">
+                <div class="img-center">
+                    <img src="/img/profile-avatar.png" alt="">
+                </div>
+                <h1 class="header-info-items my-4 " style="font-size: 4rem;">Siripong Apiborrirat</h1>
+                <div class="header-info-items my-3"><img style="width: 6rem;" src="/img/divider.png"> </img></div>
+                <p class="header-info-items my-3" style="font-size: 1.5rem;">Student - Computer Engineering</p>
+            </div>
+
     </header>
-    
-    <div class="bbb">port</div>
-    <div class="about">about</div>
-    <div class="minFs" id="">contact</div>
 
+    <section class="about" id="about">
+        <div class="card" style="background-color: transparent; border-color: transparent; padding:6rem;">
+            <div class="page-header">
+                <h1>About me</h1>
+                <div class="pb-3"><img style="width: 6rem;" src="/img/divider.png"> </img></div>
+            </div>
+            <div class="container">
+                <div>
+                    <p style="text-indent: 50px;">
+                        Hello! I'm Siripong Apiborrirat, but you can call me Jay. I'm currently pursuing a Bachelor's Degree in Computer Engineering
+                    </p>
+                </div>
+                <div>
+                    <p style="text-indent: 50px;">
+                        I'm Seeking a challenging role as a Full- Stack Developer, leveraging my dedication and drive to cultivate robust expertise in this field while contributing to innovative projects.
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="card" style="background-color: transparent; border-color: transparent; padding:6rem;">
+
+            <div class="page-header">
+                <h1>Portfoilio</h1>
+                <div class="pb-3"><img style="width: 6rem;" src="/img/divider.png"> </img></div>
+            </div>
+            <div class="container">
+                <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 " id="portfolio-item">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="card" style="background-color: transparent; border-color: transparent; padding:6rem;">
+            <div class="page-header">
+                <h1>contact</h1>
+                <div class="pb-3"><img style="width: 6rem;" src="/img/divider.png"> </img></div>
+            </div>
+            <div class="container card-about">
+                <div class="row row-cols-md-1 row-cols-xl-2" id="about-items">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p class="" style="color:white;">&copy;2023 Created by Siripong Apiborrirat</p>
+    </footer>
+    <script src="index.js"></script>
 </body>
